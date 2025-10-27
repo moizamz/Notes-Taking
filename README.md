@@ -1,4 +1,4 @@
-# AI-Powered Notes App
+# NoteX: an AI-Powered Notes App
 
 A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI integration. Create, organize, and summarize your notes with the power of AI.
 
@@ -11,7 +11,7 @@ A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI i
 - ✅ **Delete** notes with confirmation
 
 ### AI-Powered Features
-- 🤖 **AI Summarization** - Generate concise summaries of your notes using OpenAI GPT-3.5-turbo
+- 🤖 **AI Summarization** - Generate concise summaries of your notes using AI.
 - 🏷️ **Smart Tagging** - Organize notes with custom tags
 - 🔍 **Advanced Search** - Search through titles, content, and tags
 
@@ -37,7 +37,7 @@ A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI i
 
 - Node.js 18+ 
 - MongoDB (local or cloud instance)
-- OpenAI API key
+
 
 ### Installation
 
@@ -168,9 +168,6 @@ ai-notes-app/
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Support
 
