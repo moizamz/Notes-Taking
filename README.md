@@ -37,7 +37,7 @@ A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI i
 
 - Node.js 18+ 
 - MongoDB (local or cloud instance)
-- OpenAI API key
+
 
 ### Installation
 
@@ -168,9 +168,6 @@ ai-notes-app/
 4. Test thoroughly
 5. Submit a pull request
 
-## License
-
-This project is licensed under the MIT License.
 
 ## Support
 
