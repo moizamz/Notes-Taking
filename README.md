@@ -142,7 +142,7 @@ ai-notes-app/
 ## Features in Detail
 
 ### AI Summarization
-- Uses OpenAI's GPT-3.5-turbo model
+- Uses Groq Llama model
 - Generates 2-3 sentence summaries
 - Summaries are saved with the note
 - Error handling for API failures
