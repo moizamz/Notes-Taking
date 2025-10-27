@@ -160,6 +160,44 @@ ai-notes-app/
 - Text indexing for better search performance
 - Data validation and error handling
 
+## Troubleshooting
+
+### AI Summarization Not Working
+
+If the AI summarization feature is not working and you're getting generic fallback summaries:
+
+1. **Check your `.env.local` file**
+   - Make sure there are no extra blank lines between variables
+   - Format should be:
+     ```
+     MONGODB_URI=mongodb://localhost:27017/ai-notes-app
+     GROQ_API_KEY=your_groq_api_key_here
+     NEXT_PUBLIC_APP_NAME=AI Notes App
+     ```
+
+2. **Restart the development server**
+   - Stop the current server (Ctrl+C)
+   - Run `npm run dev` again to reload environment variables
+
+3. **Verify your Groq API key**
+   - Make sure your API key is valid at [Groq Console](https://console.groq.com/keys)
+   - Check that the key has no extra spaces or line breaks
+
+4. **Check MongoDB is running**
+   - Make sure MongoDB service is running on your machine
+   - Or verify your MongoDB Atlas connection string is correct
+
+### Port Already in Use
+
+If you see "Port 3000 is in use":
+```bash
+# Windows
+Get-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess | Stop-Process -Force
+
+# Mac/Linux
+lsof -ti:3000 | xargs kill -9
+```
+
 ## Contributing
 
 1. Fork the repository

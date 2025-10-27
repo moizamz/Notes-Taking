@@ -8,6 +8,7 @@ import SearchBar from '@/components/SearchBar';
 import TagFilter from '@/components/TagFilter';
 import CategoryFilter from '@/components/CategoryFilter';
 import SummaryModal from '@/components/SummaryModal';
+import ConfirmDialog from '@/components/ConfirmDialog';
 
 interface Note {
   _id: string;
@@ -34,6 +35,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [summaryModalOpen, setSummaryModalOpen] = useState(false);
   const [selectedSummary, setSelectedSummary] = useState<{ title: string; summary: string } | null>(null);
+  const [deleteConfirmOpen, setDeleteConfirmOpen] = useState(false);
+  const [noteToDelete, setNoteToDelete] = useState<string | null>(null);
 
   // Fetch notes
   const fetchNotes = async () => {
@@ -99,16 +102,28 @@ export default function Home() {
     setIsEditorOpen(true);
   };
 
-  const handleDeleteNote = async (noteId: string) => {
-    if (!confirm('Are you sure you want to delete this note?')) return;
+  const handleDeleteNote = (noteId: string) => {
+    setNoteToDelete(noteId);
+    setDeleteConfirmOpen(true);
+  };
+
+  const confirmDelete = async () => {
+    if (!noteToDelete) return;
     
     try {
-      await fetch(`/api/notes/${noteId}`, { method: 'DELETE' });
+      await fetch(`/api/notes/${noteToDelete}`, { method: 'DELETE' });
       fetchNotes();
       fetchTags();
+      setDeleteConfirmOpen(false);
+      setNoteToDelete(null);
     } catch (error) {
       console.error('Error deleting note:', error);
     }
+  };
+
+  const cancelDelete = () => {
+    setDeleteConfirmOpen(false);
+    setNoteToDelete(null);
   };
 
   const handleArchiveNote = async (noteId: string, isArchived: boolean) => {
@@ -343,6 +358,18 @@ export default function Home() {
             noteTitle={selectedSummary.title}
           />
         )}
+
+        {/* Delete Confirmation Dialog */}
+        <ConfirmDialog
+          isOpen={deleteConfirmOpen}
+          title="Delete Note"
+          message="Are you sure you want to delete this note? This action cannot be undone."
+          confirmText="Delete"
+          cancelText="Cancel"
+          onConfirm={confirmDelete}
+          onCancel={cancelDelete}
+          type="danger"
+        />
       </div>
     </div>
   );
