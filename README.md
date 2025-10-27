@@ -11,7 +11,7 @@ A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI i
 - ✅ **Delete** notes with confirmation
 
 ### AI-Powered Features
-- 🤖 **AI Summarization** - Generate concise summaries of your notes using OpenAI GPT-3.5-turbo
+- 🤖 **AI Summarization** - Generate concise summaries of your notes using AI.
 - 🏷️ **Smart Tagging** - Organize notes with custom tags
 - 🔍 **Advanced Search** - Search through titles, content, and tags
 
