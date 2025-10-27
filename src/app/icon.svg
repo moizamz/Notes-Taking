@@ -1,0 +1,62 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="64" height="64" rx="14" fill="url(#bgGradient)"/>
+  
+  <!-- Notepad pages (layered effect) -->
+  <rect x="12" y="14" width="36" height="42" rx="3" fill="white" opacity="0.3"/>
+  <rect x="13" y="15" width="36" height="42" rx="3" fill="white" opacity="0.5"/>
+  <rect x="14" y="16" width="36" height="42" rx="3" fill="white" stroke="#E5E7EB" strokeWidth="1.5"/>
+  
+  <!-- Colorful top binding -->
+  <rect x="14" y="16" width="36" height="6" rx="3" fill="url(#bindingGradient)"/>
+  
+  <!-- Colorful lines on paper -->
+  <line x1="20" y1="28" x2="44" y2="28" stroke="#A855F7" strokeWidth="2.5" strokeLinecap="round" opacity="0.6"/>
+  <line x1="20" y1="34" x2="42" y2="34" stroke="#3B82F6" strokeWidth="2.5" strokeLinecap="round" opacity="0.6"/>
+  <line x1="20" y1="40" x2="40" y2="40" stroke="#EC4899" strokeWidth="2.5" strokeLinecap="round" opacity="0.6"/>
+  <line x1="20" y1="46" x2="38" y2="46" stroke="#F59E0B" strokeWidth="2.5" strokeLinecap="round" opacity="0.6"/>
+  
+  <!-- Fun bouncy pencil -->
+  <g transform="translate(38, 44) rotate(-40)">
+    {/* Pencil body */}
+    <rect x="0" y="0" width="4.5" height="26" rx="1.5" fill="url(#pencilGradient)"/>
+    
+    {/* Pencil tip */}
+    <path d="M0 26 L2.25 31 L4.5 26 Z" fill="#92400E"/>
+    <path d="M1.5 26 L2.25 31 L3 26 Z" fill="#374151"/>
+    
+    {/* Eraser (pink) */}
+    <rect x="0" y="-3.5" width="4.5" height="3.5" rx="0.8" fill="#EC4899"/>
+    
+    {/* Metal band */}
+    <rect x="0" y="-0.8" width="4.5" height="0.8" fill="#94A3B8"/>
+    
+    {/* Shine on pencil */}
+    <line x1="1.2" y1="3" x2="1.2" y2="12" stroke="white" strokeWidth="1.2" opacity="0.5"/>
+  </g>
+  
+  <!-- Sparkles around -->
+  <g>
+    <path d="M10 12 L10 18 M7 15 L13 15" stroke="#FBBF24" strokeWidth="3" strokeLinecap="round"/>
+    <path d="M54 14 L54 20 M51 17 L57 17" stroke="#FBBF24" strokeWidth="3" strokeLinecap="round"/>
+    <circle cx="54" cy="52" r="3" fill="#FB923C"/>
+    <circle cx="10" cy="52" r="2.5" fill="#A855F7"/>
+  </g>
+  
+  <defs>
+    <linearGradient id="bgGradient" x1="0" y1="0" x2="64" y2="64">
+      <stop offset="0%" stopColor="#9333EA"/>
+      <stop offset="50%" stopColor="#EC4899"/>
+      <stop offset="100%" stopColor="#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="bindingGradient" x1="14" y1="16" x2="50" y2="16">
+      <stop offset="0%" stopColor="#A855F7"/>
+      <stop offset="50%" stopColor="#EC4899"/>
+      <stop offset="100%" stopColor="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="pencilGradient" x1="0" y1="0" x2="0" y2="26">
+      <stop offset="0%" stopColor="#FCD34D"/>
+      <stop offset="100%" stopColor="#F59E0B"/>
+    </linearGradient>
+  </defs>
+</svg>
