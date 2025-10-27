@@ -1,4 +1,4 @@
-# AI-Powered Notes App
+# NoteX: an AI-Powered Notes App
 
 A modern, full-stack notes application built with Next.js, MongoDB, and OpenAI integration. Create, organize, and summarize your notes with the power of AI.
 
